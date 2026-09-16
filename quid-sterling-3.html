@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quid Sterling — Start a US company from anywhere</title>
+<meta name="description" content="A plain-English guide for founders outside the US: choosing an LLC or C-Corp, picking a state, getting an EIN, opening a US bank account and staying compliant.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%230c1230%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-family=%27system-ui%27 font-size=%2719%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3E%C2%A3%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --sky:#0c1230; --sheet:#111a3a; --sheet-2:#16204a;
+  --ink:#eef2fb; --ink-2:#b9c3dc; --ink-3:#8a95b3;
+  --rule:#243056;
+  --harbour:#0c1230; --harbour-2:#5fd3f3;
+  --beacon:#ffffff; --beacon-ink:#0f1733;
+  --ok:#3ecf8e;
+  --display:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --body:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --shell:1120px; --gutter:clamp(1.1rem,4vw,2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:radial-gradient(1200px 700px at 50% 20%,#132463 0%,transparent 60%),radial-gradient(900px 600px at 85% 70%,#2a1b4d 0%,transparent 60%),#0c1230;background-attachment:fixed;color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+a{color:var(--harbour-2);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--beacon);outline-offset:3px;border-radius:4px}
+.wrap{width:min(var(--shell),100% - 2*var(--gutter));margin-inline:auto}
+.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;z-index:9;background:var(--ink);color:var(--sheet);padding:.6rem 1rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--body);font-weight:600;text-decoration:none;border-radius:10px;padding:.85rem 1.35rem;line-height:1.2;transition:transform .15s ease,background-color .15s ease}
+.btn-primary{background:var(--beacon);color:var(--beacon-ink)}
+.btn-primary{box-shadow:0 8px 30px -10px rgb(95 211 243/.45)}.btn-primary:hover{background:#e6ecfa}
+.btn-primary:active{transform:translateY(1px)}
+.btn-quiet{color:var(--ink);border:1.5px solid var(--rule)}
+.btn-quiet:hover{border-color:var(--ink-3)}
+.btn-lg{font-size:1.1rem;padding:1rem 1.6rem}
+.btn small{font-weight:400;opacity:.75}
+
+/* Header */
+.top{position:sticky;top:0;z-index:5;background:rgb(12 16 34/.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:74px}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none}.brand-name{display:block;font-weight:600;font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.1}.brand-tag{display:block;font-size:.68rem;color:var(--ink-3);letter-spacing:.01em;font-weight:400;line-height:1.3}
+.brand svg{width:34px;height:34px;flex:none}
+.nav{display:flex;gap:1.6rem;align-items:center}
+.nav a{color:#dfe5f3;text-decoration:none;font-weight:500;font-size:.95rem}
+.nav a:hover{color:var(--ink)}
+.top .btn{padding:.6rem 1rem;font-size:.95rem}
+@media (max-width:820px){.nav{display:none}}
+
+/* Hero */
+.hero{padding:clamp(4rem,10vw,7.5rem) 0 clamp(3rem,7vw,5rem);text-align:center}
+.hero h1{font-weight:900;letter-spacing:-.045em;line-height:1.02;font-size:clamp(2.8rem,8.5vw,6.6rem);max-width:none}
+.hero h1 .l1{display:block;background:linear-gradient(90deg,#e7ebf3,#98a5bd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 .l2{display:block;background:linear-gradient(90deg,#63d4f5,#56bcd8);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.hero .lede{margin:1.8rem auto 0;font-size:clamp(1.1rem,1.9vw,1.4rem);color:#cfd6e6;max-width:36em}
+.hero-actions{margin-top:2.4rem;display:flex;justify-content:center}
+.hero .btn-lg{font-size:1.2rem;padding:1.1rem 2rem}
+.proof{margin:3.2rem 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem 2.2rem;color:#aeb8cf}
+.proof li{display:flex;align-items:center;gap:.55rem}
+.proof li::before{content:"";width:18px;height:18px;border-radius:50%;background:rgb(62 207 142/.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5.5 9.2l2.2 2.2 4.8-4.8' fill='none' stroke='%233ecf8e' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.hero-note{margin:2.6rem auto 0;font-size:.85rem;color:var(--ink-3);max-width:40em}
+/* Sections */
+section.block{padding:clamp(3rem,7vw,5.5rem) 0;border-top:1px solid var(--rule)}
+.block h2{font-size:clamp(1.9rem,3.8vw,2.7rem);font-weight:700;max-width:22ch}
+.block .intro{margin-top:1rem;color:var(--ink-2);max-width:40em;font-size:1.08rem}
+.alt{background:rgb(255 255 255/.025)}
+
+.steps{margin:2.5rem 0 0;padding:0;list-style:none;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:4.5rem 1fr;gap:1.2rem;padding:1.6rem 0;border-top:1px solid var(--rule);counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:2.6rem;line-height:1;color:var(--harbour-2)}
+.steps h3{font-size:1.3rem;font-weight:700;margin-bottom:.4rem}
+.steps p{color:var(--ink-2);max-width:44em}
+
+.fit{margin-top:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+@media (max-width:760px){.fit{grid-template-columns:1fr}}
+.fit h3{font-size:1.2rem;margin-bottom:.8rem}
+.fit ul{margin:0;padding:0;list-style:none}
+.fit li{padding:.55rem 0 .55rem 1.9rem;position:relative;color:var(--ink-2);border-bottom:1px dashed var(--rule)}
+.fit .yes li::before{content:"";position:absolute;left:.2rem;top:1.05rem;width:.8rem;height:.45rem;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
+.fit .no li::before{content:"";position:absolute;left:.25rem;top:1.15rem;width:.85rem;border-top:2.5px solid var(--ink-3)}
+
+.table-scroll{margin-top:2.2rem;overflow-x:auto;border:1px solid var(--rule);border-radius:14px;background:rgb(255 255 255/.03)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.98rem}
+th,td{text-align:left;padding:1rem 1.2rem;vertical-align:top;border-bottom:1px solid var(--rule)}
+tr:last-child td{border-bottom:0}
+thead th{font-family:var(--display);font-size:1.1rem;background:var(--sheet-2)}
+tbody th{font-weight:600;color:var(--ink);width:26%}
+td{color:var(--ink-2)}
+.table-note{margin-top:.9rem;font-size:.9rem;color:var(--ink-3)}
+
+.checklist{margin-top:2.2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem 2.5rem}
+.checklist div{border-left:3px solid var(--harbour-2);padding-left:1rem}
+.checklist h3{font-size:1.08rem;margin-bottom:.3rem}
+.checklist p{color:var(--ink-2);font-size:.97rem}
+
+.partner{display:grid;grid-template-columns:1fr;max-width:52rem;gap:clamp(2rem,5vw,4rem);align-items:start}
+@media (max-width:860px){.partner{grid-template-columns:1fr}}
+.partner p + p{margin-top:1rem}
+.partner .body{color:var(--ink-2);font-size:1.05rem;margin-top:1.2rem}
+.disclose{background:var(--sheet-2);border:1px solid var(--rule);border-radius:14px;padding:1.4rem}
+.disclose h3{font-size:1.05rem;margin-bottom:.5rem}
+.disclose p{font-size:.95rem;color:var(--ink-2)}
+.disclose .btn{margin-top:1.2rem}
+
+.faq{margin-top:2rem;max-width:52rem}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:1.15rem 2.5rem 1.15rem 0;font-weight:600;font-size:1.07rem;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.3rem;top:.85rem;font-size:1.5rem;color:var(--harbour-2);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 1.2rem;color:var(--ink-2);max-width:46em}
+
+.final{background:rgb(255 255 255/.03)}
+.final .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem}
+.final h2{color:#fff;max-width:18ch}
+.final p{color:#d6e2f0;margin-top:.8rem;max-width:34em}
+
+footer{padding:3rem 0 3.5rem;font-size:.9rem;color:var(--ink-3)}
+.foot-grid{display:grid;grid-template-columns:1fr 2fr;gap:2.5rem}
+@media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
+footer h3{font-family:var(--body);font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;letter-spacing:0}
+footer p + p{margin-top:.8rem}
+footer a{color:var(--ink-2)}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Quid Sterling home">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#fff" stroke-width="2.2"/><text x="17" y="23" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="700" fill="#fff">&#163;</text></svg><span><span class="brand-name">Quid Sterling</span><span class="brand-tag">StartGlobal Partner</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#compare">LLC or C-Corp</a>
+      <a href="#need">What you need</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" href="https://startglobal.co/?via=ajaykrishna" target="_blank" rel="sponsored noopener">Get Started</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1><span class="l1">Start a US Company</span><span class="l2">from Anywhere</span></h1>
+      <p class="lede">Form your LLC, open a US bank account and stay compliant, without living in the US.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="https://startglobal.co/?via=ajaykrishna" target="_blank" rel="sponsored noopener">Get started</a>
+      </div>
+      <ul class="proof">
+        <li>LLC and C-Corp formation</li>
+        <li>US business banking</li>
+        <li>Yearly compliance support</li>
+      </ul>
+      <p class="hero-note">Services are provided by StartGlobal.</p>
+    </div>
+  </section>
+
+  <section class="block alt" id="how">
+    <div class="wrap">
+      <h2>How starting a US company from abroad works</h2>
+      <p class="intro">The process is mostly online. Timelines depend on the state, the IRS and your bank, so treat any "done in 24 hours" promise with care.</p>
+      <ol class="steps">
+        <li><div><h3>Choose your structure and state</h3><p>Most solo founders and small online businesses choose an LLC. If you plan to raise money from investors, a C-Corporation, usually in Delaware, is the common choice. The state affects your yearly fees, not where you can sell.</p></div></li>
+        <li><div><h3>Register the company and appoint a registered agent</h3><p>Every US company needs a registered agent with a physical address in its state to receive official letters. Formation services usually include this. Once the state accepts your filing, your company legally exists.</p></div></li>
+        <li><div><h3>Get your EIN</h3><p>The Employer Identification Number is your company's tax ID. Banks, Stripe and marketplaces will ask for it. You don't need a US Social Security Number to get one, but without one the application isn't done online and can take a few weeks.</p></div></li>
+        <li><div><h3>Open a US business bank account</h3><p>Several US banks and fintech providers open accounts remotely for non-resident owners. Approval isn't guaranteed and depends on your business, your documents and the provider's checks.</p></div></li>
+        <li><div><h3>Keep up with filings every year</h3><p>Most states want an annual report or tax, and the IRS has its own forms for foreign-owned companies, even ones with no income. Missing them can cost far more than filing on time.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>Is a US company right for you?</h2>
+      <p class="intro">It's a great fit for some businesses and an expensive distraction for others. Be honest with yourself here.</p>
+      <div class="fit">
+        <div class="yes">
+          <h3>Often a good fit if you</h3>
+          <ul>
+            <li>Sell software, digital products or services to US customers</li>
+            <li>Need Stripe, US marketplaces or US payment platforms</li>
+            <li>Plan to raise money from US investors</li>
+            <li>Want a company that US clients recognise and trust</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h3>Probably not worth it if you</h3>
+          <ul>
+            <li>Only sell in your home country, where a local company is simpler</li>
+            <li>Hope it will remove tax in your home country (it usually won't)</li>
+            <li>Aren't ready to handle yearly US filings or pay someone to</li>
+            <li>Have a business that needs a US licence or physical premises</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="compare">
+    <div class="wrap">
+      <h2>LLC or C-Corp: the short version</h2>
+      <p class="intro">This is a simplified comparison. Your situation, especially your home country's tax rules, matters more than any table.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col"></th><th scope="col">LLC</th><th scope="col">C-Corp</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Best for</th><td>Freelancers, agencies, e-commerce, bootstrapped SaaS</td><td>Startups raising venture or angel funding</td></tr>
+            <tr><th scope="row">How it's taxed</th><td>Usually "pass-through": profit is taxed on the owner rather than the company, depending on where the income comes from</td><td>The company pays US corporate tax on profit, and dividends can be taxed again</td></tr>
+            <tr><th scope="row">Investors</th><td>Many investors won't invest in an LLC</td><td>The standard setup investors expect</td></tr>
+            <tr><th scope="row">Paperwork</th><td>Lighter, but foreign-owned single-member LLCs still file IRS Form 5472 each year</td><td>Heavier: a full corporate tax return every year</td></tr>
+            <tr><th scope="row">Popular states</th><td>Wyoming, New Mexico, Delaware</td><td>Delaware</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Not tax or legal advice. Speak to an accountant who knows both US rules and your home country before you decide.</p>
+    </div>
+  </section>
+
+  <section class="block" id="need">
+    <div class="wrap">
+      <h2>What you'll need before you start</h2>
+      <p class="intro">Having these ready makes the process much smoother.</p>
+      <div class="checklist">
+        <div><h3>A valid passport</h3><p>For identity checks by your formation service and bank.</p></div>
+        <div><h3>Proof of address</h3><p>A recent utility bill or bank statement from your home country.</p></div>
+        <div><h3>A company name</h3><p>Check it's available in your chosen state, with a backup or two.</p></div>
+        <div><h3>A clear business description</h3><p>What you sell and who to. Banks will ask, and vague answers get rejected.</p></div>
+        <div><h3>A budget for year one</h3><p>Setup fees plus state annual fees, registered agent renewal and tax filing help.</p></div>
+        <div><h3>Advice from home</h3><p>A quick check with a local accountant on how your home country taxes a foreign company.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="disclosure">
+    <div class="wrap partner">
+      <div>
+        <h2>Why we point you to StartGlobal</h2>
+        <div class="body">
+          <p>You can form a US company yourself by filing with the state and applying for an EIN directly. Plenty of people do. But for founders outside the US, juggling the state, the IRS, a registered agent and a bank is where most mistakes happen.</p>
+          <p>StartGlobal describes itself as one platform for forming your LLC, opening a US bank account and staying compliant, with all-inclusive pricing. That covers most of the steps above in one place, which is why we recommend it as a starting point.</p>
+          <p>Always check their current prices, what's included and their terms before you pay. If another provider suits you better, use it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap">
+      <h2>Common questions</h2>
+      <div class="faq">
+        <details><summary>Can I own a US company if I'm not a US citizen or resident?</summary><p>Yes. US states let non-residents form and own LLCs and corporations. Owning a company doesn't give you the right to live or work in the US, though. That's a separate immigration matter.</p></details>
+        <details><summary>Do I need to travel to the US?</summary><p>Usually not. Formation and the EIN can be handled remotely, and several banking providers onboard non-residents online. A few traditional banks still ask for an in-person visit.</p></details>
+        <details><summary>Do I need an SSN or ITIN?</summary><p>Not to form the company or get an EIN. Some banks and payment providers may ask for extra ID, and you may need an ITIN later for certain personal tax situations.</p></details>
+        <details><summary>Will I pay US tax?</summary><p>It depends on your structure and whether your income is connected to business activity in the US. Many foreign-owned LLCs with no US activity owe little or no US income tax but still have filing duties. You'll usually still owe tax in your home country. Get proper advice.</p></details>
+        <details><summary>What ongoing costs should I expect?</summary><p>Typically a state annual report or franchise tax, a registered agent renewal and tax filing help. Amounts vary a lot by state, so compare before you choose.</p></details>
+        <details><summary>What happens if I miss the yearly filings?</summary><p>States can fine or dissolve your company, and the IRS penalty for a missing Form 5472 starts at $25,000. Set reminders or use a service that handles compliance.</p></details>
+        <details><summary>Is this legal or tax advice?</summary><p>No. Quid Sterling is a general guide written to help you understand the process. For decisions about your own situation, speak to a qualified accountant or lawyer.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block final">
+    <div class="wrap">
+      <div>
+        <h2>Ready to set up your US company?</h2>
+        <p>Start with StartGlobal to form your company, sort banking and keep on top of compliance from one place.</p>
+      </div>
+      <a class="btn btn-primary btn-lg" href="https://startglobal.co/?via=ajaykrishna" target="_blank" rel="sponsored noopener">Get started</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="#top" aria-label="Quid Sterling home">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="#fff" stroke-width="2.2"/><text x="17" y="23" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="700" fill="#fff">&#163;</text></svg><span><span class="brand-name">Quid Sterling</span><span class="brand-tag">StartGlobal Partner</span></span>
+      </a>
+      <p style="margin-top:.8rem">A plain-English guide to starting a US company from outside the US.</p>
+      <p>Contact: <a href="mailto:sunilkumarajaykrishna@gmail.com">sunilkumarajaykrishna@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Important information</h3>
+      <p>Quid Sterling provides general information only. It is not legal, tax or financial advice, and we are not a law firm, accountancy or formation agent. Rules and fees change, so check details with official sources and qualified professionals before acting.</p>
+      <p>Quid Sterling is an independent StartGlobal affiliate partner. We are not part of StartGlobal and not connected to any US government agency. We may earn a referral fee when you sign up through links on this site, at no extra cost to you.</p>
+      <div class="foot-links">
+        <a href="https://www.irs.gov/businesses/small-businesses-self-employed/employer-id-numbers" target="_blank" rel="noopener">IRS: EIN information</a>
+        <a href="https://www.sba.gov/business-guide/launch-your-business/register-your-business" target="_blank" rel="noopener">SBA: Register your business</a>
+      </div>
+      <p style="margin-top:1.4rem">© 2026 Quid Sterling</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
